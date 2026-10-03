@@ -22,4 +22,13 @@ public class HelloController {
                 "message", "Spring Boot application is running"
         );
     }
+    
+@GetMapping("/api/status")
+public Map<String, String> status() {
+    return Map.of(
+            "status", "UP",
+            "application", "spring-devops-app"
+    );
+}
+
 }
